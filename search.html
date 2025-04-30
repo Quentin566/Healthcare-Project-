@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search - Medical Care Finder</title>
+  <meta name="description" content="Search healthcare providers by location, specialty, or insurance using Medical Care Finder's easy filter tools.">
+  <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+  <header>
+    <h1>Search Providers</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="main.html">Main</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-hero">
+      <img src="images/search.jpg" alt="Search for Healthcare Providers" class="responsive-img">
+    </section>
+
+    <section class="search-form-section">
+      <h2>Find the Care You Need</h2>
+      <form action="https://webdevbasics.net/scripts/demo.php" method="post" class="search-form">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter city or zip code" required>
+
+        <label for="specialty">Specialty:</label>
+        <select id="specialty" name="specialty" required>
+          <option value="">Select Specialty</option>
+          <option value="primary">Primary Care</option>
+          <option value="emergency">Emergency Care</option>
+          <option value="specialized">Specialized Care</option>
+          <option value="dental">Dental Care</option>
+          <option value="mental">Mental Health</option>
+        </select>
+
+        <label for="insurance">Insurance Provider:</label>
+        <input type="text" id="insurance" name="insurance" placeholder="Enter insurance name" required>
+
+        <button type="submit">Search Providers</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Medical Care Finder</p>
+  </footer>
+</body>
+</html>
