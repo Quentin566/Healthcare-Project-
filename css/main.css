@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  background-color: #336699;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #336699;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.main-hero {
+  position: relative;
+  text-align: center;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  border: 4px solid #336699;
+  margin-bottom: 20px;
+}
+
+.main-hero-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background-color: rgba(51, 102, 153, 0.8);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+}
+
+.why-choose {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.why-choose h2 {
+  color: #336699;
+  margin-bottom: 1rem;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.why-choose li {
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: #336699;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
