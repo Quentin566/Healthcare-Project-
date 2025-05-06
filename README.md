@@ -1,13 +1,17 @@
 # Medical Healthcare Finder Project
 
 # Description
-The site is used to find and located health services that fit peoples needs: based in location, price, services, multiple things.
+This is a website developed to help people search for medical services, and connect and explore healthcare resources.
 
-# Features
-- Search feature and fuctionality
-- contact forms
-- compare and contrast
-- recommended resources provided
+# Live site link
+https://quentin566.github.io/Healthcare-Project-/index.html
+
+# Purpose and features
+The purpose is to simulate a healthcare portal that allows people to:
+- View various healthcare services offered
+- search for different or specialized healthcare providers
+- Have access to patient friendly resources and educational content
+- have a point of contact with the simulated company through several means
 
 
   # files
