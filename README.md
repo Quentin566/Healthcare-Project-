@@ -13,8 +13,13 @@ The purpose is to simulate a healthcare portal that allows people to:
 - Have access to patient friendly resources and educational content
 - have a point of contact with the simulated company through several means
 
+# Installation
+There is no installation required
 
-  # files
+# Usage Instructions
+To use the site you can navigate from the top to go to the page you want. Some sites will navigate you to another site entirely (like in the resources tab).
+
+ # files types
   Made in html and css
 
   # Author
