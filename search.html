@@ -29,9 +29,9 @@
 
     <section class="search-form-section">
       <h2>Find the Care You Need</h2>
-      <form action="https://webdevbasics.net/scripts/demo.php" method="post" class="search-form">
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" placeholder="Enter city or zip code" required>
+      <form id="search-form" class="search-form">
+        <label for="location">Location (City):</label>
+        <input type="text" id="location" name="location" placeholder="Enter city" required>
 
         <label for="specialty">Specialty:</label>
         <select id="specialty" name="specialty" required>
@@ -44,15 +44,96 @@
         </select>
 
         <label for="insurance">Insurance Provider:</label>
-        <input type="text" id="insurance" name="insurance" placeholder="Enter insurance name" required>
+        <input type="text" id="insurance" name="insurance" placeholder="Enter insurance name">
 
         <button type="submit">Search Providers</button>
       </form>
     </section>
+
+    <section id="results" class="search-results">
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Medical Care Finder</p>
+    <p>&copy; Ques 2025 Medical Care Finder</p>
   </footer>
+
+  <script>
+    const providers = [
+      {
+        name: "Tanner Primary Care",
+        city: "Carrollton",
+        specialty: "primary",
+        insurance: "Blue Cross",
+        address: "101 Clinic Dr, Carrollton, GA 30117",
+        phone: "(770) 812-3850"
+      },
+      {
+        name: "Piedmont Emergency Services",
+        city: "Carrollton",
+        specialty: "emergency",
+        insurance: "Aetna",
+        address: "794 S Park St, Carrollton, GA 30117",
+        phone: "(678) 732-1500"
+      },
+      {
+        name: "Specialized Ortho Center",
+        city: "Carrollton",
+        specialty: "specialized",
+        insurance: "Cigna",
+        address: "160 Clinic Ave, Carrollton, GA 30117",
+        phone: "(770) 834-4321"
+      },
+      {
+        name: "Carrollton Dental Group",
+        city: "Carrollton",
+        specialty: "dental",
+        insurance: "Humana",
+        address: "200 Dental Blvd, Carrollton, GA 30117",
+        phone: "(770) 832-0809"
+      },
+      {
+        name: "West GA Mental Wellness",
+        city: "Carrollton",
+        specialty: "mental",
+        insurance: "UnitedHealthcare",
+        address: "300 Wellness Dr, Carrollton, GA 30117",
+        phone: "(770) 838-8801"
+      }
+    ];
+
+    document.getElementById('search-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const location = document.getElementById('location').value.trim().toLowerCase();
+      const specialty = document.getElementById('specialty').value;
+      const insurance = document.getElementById('insurance').value.trim().toLowerCase();
+      const resultsDiv = document.getElementById('results');
+
+      const filtered = providers.filter(p =>
+        p.city.toLowerCase().includes(location) &&
+        p.specialty === specialty &&
+        (insurance === "" || p.insurance.toLowerCase().includes(insurance))
+      );
+
+      if (filtered.length === 0) {
+        resultsDiv.innerHTML = '<p>No matching providers found. Sorry about that!</p>';
+        return;
+      }
+
+      let html = '<h3> Your Matching Providers:</h3><ul>';
+      filtered.forEach(p => {
+        html += `<li>
+          <strong>${p.name}</strong><br>
+          ${p.address}<br>
+          ${p.phone}<br>
+          Specialty: ${p.specialty.charAt(0).toUpperCase() + p.specialty.slice(1)}<br>
+          Accepts: ${p.insurance}
+        </li>`;
+      });
+      html += '</ul>';
+      resultsDiv.innerHTML = html;
+    });
+  </script>
 </body>
 </html>
